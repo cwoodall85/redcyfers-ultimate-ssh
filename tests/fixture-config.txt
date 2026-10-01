@@ -1,0 +1,76 @@
+# Generated from AWS account 000000000000 (us-west-2) on 2020-01-01
+# Regenerate: aws ec2 describe-instances --profile example
+
+Host *
+    User deploy
+    IdentityFile ~/.ssh/id_ed25519_example
+    ServerAliveInterval 60
+    StrictHostKeyChecking accept-new
+
+Host api-01
+    HostName api-01.example.internal
+    # i-0000000000000001  running  (dns)
+
+Host api-02
+    HostName api-02.example.internal
+    # i-0000000000000002  running  (dns)
+
+Host cache-01
+    HostName cache-01.example.internal
+
+# ---------------------------------------------------------------------
+# Lab / on-prem (example datacenter)
+# Source: inventory.example  -- added 2020-01-02
+# ---------------------------------------------------------------------
+
+# --- Admin ---
+
+Host lab-admin1
+    HostName 10.10.0.10
+
+Host lab-admin2
+    HostName 10.10.0.11
+
+# --- Web tier ---
+
+Host lab-web1
+    HostName 10.10.1.10
+    Port 2222
+
+Host lab-web2
+    HostName 10.10.1.11
+
+Host lab-web3
+    HostName 10.10.1.12
+
+# --- CDN ---
+
+Host lab-cdn0
+    HostName 10.10.2.10
+
+Host lab-cdn1
+    HostName 10.10.2.11
+
+# --- Services ---
+
+Host lab-svc0
+    HostName 10.10.3.10
+    Compression yes
+
+Host lab-svc1
+    HostName 10.10.3.11
+
+Host lab-svc2
+    HostName 10.10.3.12
+
+# --- Dev boxes ---
+
+Host lab-dev00
+    HostName 10.10.4.10
+    User ubuntu
+
+Host lab-dev01
+    HostName 10.10.4.11
+
+Host lab-dev02
+    HostName 10.10.4.12

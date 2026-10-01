@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Never commit real connection data or screenshots of it
+*.sshconfig
+config
+session.json
+settings.json
+backups/
+*.png
